@@ -1,0 +1,9 @@
+<h1>Articles</h1>
+<ul class="list-group my-4 mx-5">
+  <%@articles.each do |article| %>
+    <li class="list-group-item">
+      <h5><%=link_to article.title, article_path(article.id), class:"text-decoration-none"%></h5>
+      <p><%=article.content%></p>
+    </li>
+  <%end %>
+</ul>
